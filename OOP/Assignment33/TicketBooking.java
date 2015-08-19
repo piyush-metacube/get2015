@@ -17,7 +17,7 @@ public class TicketBooking
 	// will show menu options
 	public void showMenu()
 	{
-		while (true)
+		do
 		{
 			System.out.println("Railway Booking Application");
 			System.out.println("Choose from options");
@@ -48,6 +48,7 @@ public class TicketBooking
 				break;
 			}
 		}
+		while (true);
 	}
 
 	// will be called in case of booking tickets
