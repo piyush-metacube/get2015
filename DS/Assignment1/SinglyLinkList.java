@@ -55,9 +55,9 @@ public class SinglyLinkList {
     }
 
     // returns the element at the specified position in this list.
-    public Object get(int index) {
+    public int get(int index) {
 	if (index < 0)
-	    return null;
+	    return -1;
 
 	Node current = head.getNext();
 
@@ -101,5 +101,27 @@ public class SinglyLinkList {
 	    current = current.getNext();
 	}
 	return output;
+    }
+
+    // will reverse the list
+    public void reverse() {
+	Node reversedPart = null;
+	Node current = head;
+	while (current != null) {
+	    Node next = current.getNext();
+	    current.setNext(reversedPart);
+	    reversedPart = current;
+	    current = next;
+	}
+    }
+
+    // will print the list
+    public void displayList() {
+	Node current = head;
+	while (current != null) {
+	    System.out.println(current.getData());
+	    current = current.getNext();
+	}
+
     }
 }

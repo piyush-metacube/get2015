@@ -40,7 +40,7 @@ public class MyArrayList {
     }
 
     // Adding an item into array list at the given particular location i
-    public int[] addElementAtPosition(int index, int item) {
+    public int[] addElement(int index, int item) {
 	for (int i = size; i > index; i--) {
 	    myArray[i] = myArray[i - 1];
 	}
@@ -99,7 +99,7 @@ public class MyArrayList {
     }
 
     // Return Reverse of arraylist
-    public int[] reverseArrayList() {
+    public int[] reverse() {
 	int[] tempArray = new int[size];
 	for (int i = size; i > 0; i--) {
 	    tempArray[i] = myArray[i];
@@ -115,5 +115,27 @@ public class MyArrayList {
     // Clear the list i.e. remove all the elements of the list
     public void clearList() {
 	size = 0;
+    }
+
+    // to sort the array
+    public void sort() {
+	int temp;
+	for (int i = 1; i < myArray.length; i++) {
+	    for (int j = i; j > 0; j--) {
+		if (myArray[j] < myArray[j - 1]) {
+		    temp = myArray[j];
+		    myArray[j] = myArray[j - 1];
+		    myArray[j - 1] = temp;
+		}
+	    }
+	}
+    }
+
+    // will display all elements
+    public void display() {
+	for (int i : myArray) {
+	    System.out.println("  " + i);
+
+	}
     }
 }

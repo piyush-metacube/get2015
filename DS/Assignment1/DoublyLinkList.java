@@ -34,7 +34,7 @@ public class DoublyLinkList {
     }
 
     // will sort the list
-    void sort() {
+    public void sort() {
 	DoublyNode temp, current = start;
 	int check;
 	while (current != null) // apply simple sorting to sort the elements of Linked list
