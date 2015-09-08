@@ -44,16 +44,16 @@ INSERT INTO Title_Author VALUES (201,1),
 Change value of addressLine2 column of Members 
 table with “Jaipur”. 
 */
-update members
-set addressLine2='Jaipur';
+UPDATE members
+SET addressLine2='Jaipur';
 
 
 /* 
 Change value of addressLine2 column of Members table with “Jaipur”.
 */
 
-update members
-set addressLine1='EPIP, Sitapura'
+UPDATE members
+ETddressLine1='EPIP, Sitapura'
 where category='F';
 
 /*
@@ -61,16 +61,16 @@ Insert the sample data back in Publishers table using
 substitution variables.
 */
 
-set @name='ShivKhera';
-set @id=25;
+SET name='ShivKhera';
+SET id=25;
 
-insert into publishers values(@id,@name);
+INSERT INTP publishers VALUES(@id,@name);
 
 /*
 Delete those rows of Titles table belonging to Publisher
 with publisher_id = 1
 */
 
-delete from titles 
-where publisher_id=1
+DELETE FROM titles 
+WHERE publisher_id=1
 
