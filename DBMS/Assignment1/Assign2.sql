@@ -51,7 +51,7 @@ CREATE TABLE titles(title_id int Primary Key,
                     subject_id int,
                     publisher_id int,
                     Foreign Key(subject_id) References subjects(subject_id),
-                    Foreign Key(publisher_id) References publishers(publisher_id)
+                    Foreign Key(publisher_id) References publishers(publisher_id) ON DELETE CASCADE
                     );
 
 create TABLE authors(author_id int Primary key,
