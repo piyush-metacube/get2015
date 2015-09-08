@@ -7,13 +7,13 @@ use PiyushSharmaDB;
 Create all tables of Library as described and mentioned in Slides. (Write all CREATE commands in a SQL file and run that SQL File).
  */
 
-create table members(member_id int primary key,
+CREATE TABLE members(member_id int primary key,
                     member_nm varchar(90),
                     addressline1 varchar(200),
                     addressline2 varchar(200),
                     category varchar(3));
                     
-create table book_issue(issue_dt date,
+CREATE TABLE book_issue(issue_dt date,
                         accession_no int,
                         member_id int,
                         due_dt date,
@@ -21,14 +21,14 @@ create table book_issue(issue_dt date,
                         Foreign Key(member_id) References members(member_id)
                         );
                         
-create table books(accession_no int Primary key,
+CREATE TABLE books(accession_no int Primary key,
                     title_dt date,
                     purchase_dt date,
                     price int,
                     status varchar(90)
                     );
                     
-create table book_return(return_dt date,
+CREATE TABLE book_return(return_dt date,
                         accession_no int,
                         member_id int,
                         issue_dt date,
@@ -37,16 +37,16 @@ create table book_return(return_dt date,
                         Foreign key(member_id) References members(member_id)
                         );
 
-create table subjects(subject_id int,
+CREATE TABLE subjects(subject_id int,
                       subject_nm varchar(90),
                       Primary key(subject_id)
                       );
                     
-create table publishers(publisher_id int Primary Key,
+CREATE TABLE publishers(publisher_id int Primary Key,
                         publisher_nm varchar(90)
                         );
                     
-create table titles(title_id int Primary Key,
+CREATE TABLE titles(title_id int Primary Key,
                     title_nm varchar(90),
                     subject_id int,
                     publisher_id int,
@@ -54,16 +54,16 @@ create table titles(title_id int Primary Key,
                     Foreign Key(publisher_id) References publishers(publisher_id)
                     );
 
-create table authors(author_id int Primary key,
+create TABLE authors(author_id int Primary key,
                     author_nm varchar(90)
                     );
                     
-create table title_author(title_id int primary key,
+CREATE TABLE title_author(title_id int primary key,
                         author_id int References authors(author_nm)
                         );
 
 /* Write a command to display all the table names present in LIS.*/
-show tables;
+SHOW tables;
 
 /* 
 Alter definitions of following LIS tables to provide the default constraints:
@@ -74,11 +74,11 @@ Book_Issue	Issue_dt		Current date
 Book_Issue	Due_dt		Current date + 15 days
 */
 
-alter table book_issue MODIFY column issue_dt TIMESTAMP
-not null default current_timestamp;
+ALTER TABLE book_issue MODIFY column issue_dt TIMESTAMP
+NOT NULL default CURRENT_TIMESTAMP;
 
-alter table book_issue MODIFY column issue_dt TIMESTAMP
-not null default current_timestamp;
+ALTER TABLE book_issue MODIFY column issue_dt TIMESTAMP
+NOT NULL default CURRENT_TIMESTAMP;
 
 /* 
 Write  command to remove Members table of the LIS database.
