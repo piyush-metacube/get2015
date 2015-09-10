@@ -1,0 +1,27 @@
+
+CREATE TABLE CityInfo(ZipCode int PRIMARY KEY,
+		    CityName varchar(20),
+		    StateCode int REFRENCES StateInfo(StateCode)
+		    );
+
+CREATE TABLE StateInfo(StateCode int PRIMARY KEY ,
+	                       StateName varchar(90)
+		      );
+ 
+ INSERT INTO stateInfo VALUES (2015,'Maharastra');
+ INSERT INTO stateInfo VALUES (2016,'Rajasthan');
+ INSERT INTO stateInfo VALUES (2017,'Delhi');
+
+ INSERT INTO cityInfo VALUES (302017,'jaipur',2016);
+ INSERT INTO cityInfo VALUES (321001,'bharatpur',2016);
+ INSERT INTO cityInfo VALUES (400001,'mumbai',2015);
+ INSERT INTO cityInfo VALUES (305001,'ajmer',2016);
+ 
+ 
+ -- Query to find the zip code city name and stateName
+SELECT CityInfo.ZipCode,CityInfo.CityName,StateInfo.StateName from CityInfo INNER JOIN StateInfo
+on CityInfo.StateCode=StateInfo.StateCode 
+Order By CityInfo.StateName,CityInfo.CityName;
+ 
+ 
+ 
