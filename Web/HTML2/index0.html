@@ -1,0 +1,69 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Forms Example</title>
+<style type="text/css">
+input, select {
+	margin-bottom: 15px;
+}
+
+fieldset {
+	margin-bottom: 2px;
+	padding: 1px;
+}
+
+fieldset fieldset {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.range {
+	margin-bottom: 1px;
+}
+</style>
+
+</head>
+<body>
+	<form style="text-align: center; margin: auto; width: 200px;">
+		<fieldset>
+			<legend>Personal details</legend>
+			<div>
+				<label>First Name <input type="text"
+					placeholder="First name only" required autofocus>
+				</label>
+			</div>
+			<div>
+				<label>Last Name <input type="text"
+					placeholder="Last name only" required autofocus>
+				</label>
+			</div>
+			<div>
+				<label>Date of Birth <input type="date" required>
+				</label>
+			</div>
+			<div>
+				<label>Email <input type="email"
+					placeholder="example@abc.com" required>
+				</label>
+			</div>
+			<div>
+				<label>URL <input type="url" placeholder="http://xyz.com">
+				</label>
+			</div>
+
+			<div>
+				<label> Skill level (1 low - 100 high) <input type="range"
+					min="1" max="100" value="0">
+				</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<div>
+				<button type=submit>Place Order</button>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
