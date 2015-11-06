@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+
+table {
+	border-collapse: collapse;
+	border: 2px #000000 solid;
+	margin-left: 40%;
+}
+
+#name {
+	border-right: 2px #000000 solid;
+	border: 2px #000000 solid;
+}
+
+.data {
+	background-color: red;
+	width: 40px;
+	height: 20px;
+}
+
+table td {
+	width: 40px;
+}
+
+#tablegraphical {
+	margin-top: 10%;
+}
