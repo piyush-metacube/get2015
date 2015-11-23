@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<script src="../javascript/jquery-1.11.3.js"></script>
+<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../javascript/Q3.js"></script>
+
+<style>
+.btn {
+	margin-top: 10px;
+}
+
+.SubmitBtn {
+	margin-left: 650px;
+}
+</style>
+
+<title>Quiz</title>
+</head>
+<body>
+	<div class="Container well">
+		<h1 class="text-center">Quiz</h1>
+		<br />
+		<br />
+		<table align="center">
+			<tr>
+				<td>Q.1 Choose Your Country</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="btn-group" data-toggle="buttons" class="Q1">
+						<label class="btn btn-primary"> <input type="radio"
+							name="Q1" value="America" id="America">America
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q1" value="India" id="India">India
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q1" value="Australia" id="Australia">Australia
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q1" value="Pakistan" id="Pakistan">Pakistan
+						</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Q.2 Which is your favourite sport</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="btn-group" data-toggle="buttons" class="Q2">
+						<label class="btn btn-primary"> <input type="radio"
+							name=" Q2" value="Badminton" id="Badminton">Badminton
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q2" value="Tennis" id="Tennis">Tennis
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q2" value="Cricket" id="Cricket">Cricket
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q2" value="Volleyball" id="Volleyball">Volleyball
+						</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Q.3 Which is your favourite programming language</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="btn-group" data-toggle="buttons" class="Q3">
+						<label class="btn btn-primary"> <input type="radio"
+							name=" Q3" value="C" id="C">C
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q3" value="C++" id="C++">C++
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q3" value="Java" id="Java">Java
+						</label> <label class="btn btn-primary"> <input type="radio"
+							name="Q3" value="Python" id="Python">Python
+						</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Q.4 Which place you have already visited</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="btn-group" data-toggle="buttons" class="Q4">
+						<label class="btn btn-primary"> <input type="checkbox"
+							value="delhi" name="Q4">delhi
+						</label> <label class="btn btn-primary"> <input type="checkbox"
+							value="mumbai" name="Q4">mumbai
+						</label> <label class="btn btn-primary"> <input type="checkbox"
+							value="pune" name="Q4">pune
+						</label> <label class="btn btn-primary"> <input type="checkbox"
+							value="jaipur" name="Q4">jaipur
+						</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Q.5 Select your hobbies</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="btn-group" data-toggle="buttons" class="Q5">
+						<label class="btn btn-primary"> <input type="checkbox"
+							value="singing" name="Q5">singing
+						</label> <label class="btn btn-primary"> <input type="checkbox"
+							value="dancing" name="Q5">dancing
+						</label> <label class="btn btn-primary"> <input type="checkbox"
+							value="reading" name="Q5">reading
+						</label> <label class="btn btn-primary"> <input type="checkbox"
+							value="travelling" name="Q5"> travelling
+						</label>
+					</div>
+				</td>
+			</tr>
+
+		</table>
+		<br />
+		<br />
+
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn btn-info btn-lg SubmitBtn"
+			data-toggle="modal" data-target="#myModal" id="submit">Submit</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Selected Options</h4>
+					</div>
+					<div class="modal-body">
+						<p id="content">Some text in the modal.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-info btn-lg ResetBtn"
+			style="margin-right: 10px;" id="reset">Reset</button>
+
+	</div>
+</body>
+</html>
