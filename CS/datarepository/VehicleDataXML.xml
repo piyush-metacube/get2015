@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vehicles>
+	<Car>
+		<Make>2009</Make>
+		<Model>XL</Model>
+		<EngineInCc>1560</EngineInCc>
+		<FuelCapacity>80</FuelCapacity>
+		<Mileage>15</Mileage>
+		<Price>250000</Price>
+		<RoadTax>20000</RoadTax>
+		<IsAcAvailable>true</IsAcAvailable>
+		<PowerSteering>true</PowerSteering>
+		<AccessoryKit>true</AccessoryKit>
+	</Car>
+	
+	<Bike>
+		<Make>2008</Make>
+		<Model>alpha</Model>
+		<EngineInCc>150</EngineInCc>
+		<FuelCapacity>25</FuelCapacity>
+		<Mileage>55</Mileage>
+		<Price>80000</Price>
+		<RoadTax>80000</RoadTax>
+		<SelfStart>true</SelfStart>
+		<HelmetPrice>1500</HelmetPrice>
+	</Bike>
+</Vehicles>
