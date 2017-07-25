@@ -1,0 +1,11 @@
+p,piyush@abc.com,piyush sharma,21,male
+p,piyush1@abc.com,piyush s,21,male
+p,rakesh@abc.com,rakesh sharma,21,male
+p,suresh@abc.com,suresh sharma,23,male
+p,shiv@abc.com,shiv sharma,24,male
+p,radheshyam@abc.com,radheshyam sharma,25,male
+p,ramprabhu@abc.com,ramprabhu sharma,26,male
+p,kishore@abc.com,kishore sharma,27,male
+p,rameshwar@abc.com,rameshwar sharma,28,male
+o,git@abc.com,GIT,Medical,1874
+o,bit@abc.com,BIT,Engineering,1774
