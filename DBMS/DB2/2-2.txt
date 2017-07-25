@@ -1,0 +1,37 @@
+
+--to display all the categories along with its Parent category.
+
+select c1.id as "Category ID", c1.Name as Name,
+c2.Name as "Parent Cat Name", ifnull(c2.parentid,"Top Category") as "Parent Cat ID"
+From categories c1,categories c2
+Where c2.id=c1.parentID;
+
+--Result should be sorted on Parent Category.
+
+select c1.id as "Category ID", c1.Name as Name,
+c2.Name as "Parent Cat Name", c2.parentid as "Parent Cat ID"
+From categories c1,categories c2
+Where c2.id=c1.parentID
+Order By c2.parentId asc;
+
+
+--If category is top category then it should display “Top Category” in Parent category. 
+
+select c1.id as "Category ID", c1.Name as Name,
+c2.Name as "Parent Cat Name", ifnull(c2.parentid,"Top Category") as "Parent Cat ID"
+From categories c1,categories c2
+Where c2.id=c1.parentID
+Order By c2.parentId asc;
+
+--Rewrite above SQL query to display only Top Categories.
+
+select c1.id as "Category ID", c1.Name as Name,
+c2.Name as "Parent Cat Name", ifnull(c2.parentid,"Top Category") as "Parent Cat ID"
+From categories c1,categories c2
+Where c2.id=c1.parentID AND c2.parentID is NULL;
+
+
+-- To select categories if it is top category
+
+select id,name,ifnull(parentId, 'top category') from categories;
+
