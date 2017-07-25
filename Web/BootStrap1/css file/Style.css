@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+.container{
+border: 3px solid blue;	
+}
+
+.left{
+	background-color:lavenderblush; 
+	border: 1px solid black;
+	text-align: center;
+}
+
+.right{
+	background-color:lavender;
+	border: 1px solid black;
+	text-align: center;
+}
+
+
+.left1{
+	background-color:lavenderblush; 
+	border: 1px solid black;
+}
+
+.right1{
+	background-color:lavender;
+	border: 1px solid black;
+}
